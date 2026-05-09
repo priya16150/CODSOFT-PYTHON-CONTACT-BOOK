@@ -3,7 +3,7 @@ import sys
 class ContactBook:
     def __init__(self):
         """Initialize an empty contact book."""
-        self.contacts = {}  # key: name (unique identifier), value: dict of details
+        self.contacts = {}  
 
     def add_contact(self, name, phone, email, address):
         """Add a new contact. Name must be unique."""
@@ -133,7 +133,6 @@ def main():
             print("\n--- Delete Contact ---")
             name = input("  Enter the name of the contact to delete: ").strip()
             if name:
-                # Confirm deletion
                 confirm = input(f"  Are you sure you want to delete '{name}'? (y/n): ").strip().lower()
                 if confirm in ['y', 'yes']:
                     book.delete_contact(name)
